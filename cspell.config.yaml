@@ -1,0 +1,14 @@
+version: "0.2"
+ignorePaths:
+  - .gitignore
+dictionaryDefinitions: []
+dictionaries: [ pt-br ]
+words:
+  - feld
+  - iconify
+  - inlang
+  - osts
+  - paraglide
+  - SinaNova
+ignoreWords: []
+import: []

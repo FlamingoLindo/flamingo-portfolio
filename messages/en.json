@@ -1,0 +1,9 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"About me": "About me",
+	"Projects": "Projects",
+	"Socials": "Socials",
+	"Random Quote": "Random Quote",
+	"Dice Roll": "Dice Roll",
+	"Credits": "Credits"
+}
