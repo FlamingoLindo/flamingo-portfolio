@@ -12,7 +12,7 @@
 		{ id: 7, text: m['Credits']() }
 	];
 
-	let activeId: number = $state(options[0].id);
+	let { activeId = $bindable(null) }: { activeId: number | null } = $props();
 </script>
 
 <div class="menu-wrapper">

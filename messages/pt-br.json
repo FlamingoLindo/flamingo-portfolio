@@ -5,5 +5,6 @@
 	"Socials": "Redes",
 	"Random Quote": "Falas do Jogo",
 	"Dice Roll": "Jogar Dados",
-	"Credits": "Créditos"
+	"Credits": "Créditos",
+	"Description": "Sou Engenheiro de Software com experiência prática em Controle de Qualidade, automação de testes e desenvolvimento front-end/back-end. Trabalho com qualquer stack, utilizando Python, TypeScript, Rust, Node.js, Svelte e React, além de bancos de dados como PostgreSQL. Tenho experiência em testes manuais e automatizados com ferramentas como Playwright, Selenium e pytest. Gosto de construir sistemas bem estruturados e transformar problemas do mundo real em soluções simples."
 }

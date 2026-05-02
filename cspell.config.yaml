@@ -2,13 +2,15 @@ version: "0.2"
 ignorePaths:
   - .gitignore
 dictionaryDefinitions: []
-dictionaries: [ pt-br ]
+dictionaries:
+  - pt-br
 words:
   - feld
   - iconify
   - inlang
   - osts
   - paraglide
+  - pytest
   - SinaNova
 ignoreWords: []
 import: []
