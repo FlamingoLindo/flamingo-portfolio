@@ -4,16 +4,29 @@
 	import MyDialog from '$lib/components/MyDialog/MyDialog.svelte';
 	import startDialogSFX from '$lib/assets/audios/sfx/start_dialog.wav';
 	import endDialogSFX from '$lib/assets/audios/sfx/end_dialog.wav';
-
-	const audioMap: Record<number, string> = {
-		1: startDialogSFX,
-		2: endDialogSFX
-	};
+	import thcOpenSFX from '$lib/assets/audios/sfx/thc_open.wav';
+	import thcCloseSFX from '$lib/assets/audios/sfx/thc_close.wav';
+	import ProjectsCabinet from '$lib/components/ProjectsCabinet/ProjectsCabinet.svelte';
 
 	let activeId = $state<number | null>(null);
-	let currentAudio: string | null = $derived(
-		activeId !== null ? (audioMap[activeId] ?? null) : null
-	);
+	let currentAudio = $state<string | null>(null);
+
+	function handleActiveId(newId: number | null) {
+		const prev = activeId;
+		activeId = newId;
+
+		if (newId === 1) {
+			currentAudio = startDialogSFX;
+		} else if (prev === 1) {
+			currentAudio = endDialogSFX;
+		} else if (newId === 2) {
+			currentAudio = thcOpenSFX;
+		} else if (prev === 2) {
+			currentAudio = thcCloseSFX;
+		} else {
+			currentAudio = null;
+		}
+	}
 </script>
 
 {#if currentAudio}
@@ -23,11 +36,15 @@
 {/if}
 
 <div class="menu-container">
-	<MenuOptions bind:activeId />
+	<MenuOptions {activeId} onActiveIdChange={handleActiveId} />
 </div>
 
 <div class="my-dialog-container">
 	<MyDialog showing={activeId === 1} />
+</div>
+
+<div class="projects-cabinet-container">
+	<ProjectsCabinet showing={activeId === 2} />
 </div>
 
 <BackGround />
@@ -46,6 +63,16 @@
 		position: fixed;
 		top: 0;
 		right: 9rem;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		z-index: 5;
+	}
+	.projects-cabinet-container {
+		position: fixed;
+		top: 0;
+		left: 430px;
+		right: 0;
 		height: 100vh;
 		display: flex;
 		align-items: center;

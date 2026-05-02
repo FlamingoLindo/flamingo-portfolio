@@ -12,7 +12,17 @@
 		{ id: 7, text: m['Credits']() }
 	];
 
-	let { activeId = $bindable(null) }: { activeId: number | null } = $props();
+	let {
+		activeId = null,
+		onActiveIdChange
+	}: {
+		activeId: number | null;
+		onActiveIdChange: (id: number | null) => void;
+	} = $props();
+
+	function handleClick(id: number) {
+		onActiveIdChange(activeId === id ? null : id);
+	}
 </script>
 
 <div class="menu-wrapper">
@@ -20,7 +30,7 @@
 		<button
 			class="option-row"
 			class:active={activeId === option.id}
-			onclick={() => (activeId = option.id)}
+			onclick={() => handleClick(option.id)}
 		>
 			{#if activeId === option.id}
 				<img src={menuButton} alt="" class="option-bg" />
