@@ -6,8 +6,9 @@
 	import contBtnEng from '$lib/assets/images/socials/button-cont.png';
 	import contBtnBr from '$lib/assets/images/socials/button-cont-pt-BR.png';
 	import clickSFX from '$lib/assets/audios/sfx/click.wav';
+
 	let lang = getLocale();
-	const clickAudio = new Audio(clickSFX);
+
 	let {
 		tabName,
 		showing,
@@ -21,6 +22,7 @@
 	} = $props();
 
 	function handleClose() {
+		const clickAudio = new Audio(clickSFX);
 		clickAudio.play();
 		onclose?.();
 	}

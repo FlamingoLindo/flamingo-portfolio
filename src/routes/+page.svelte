@@ -10,6 +10,7 @@
 	import CustomTab from '$lib/components/CustomTab/CustomTab.svelte';
 	import Socials from '$lib/components/Socials/Socials.svelte';
 	import AboutDisco from '$lib/components/AboutDisco/AboutDisco.svelte';
+	import Dice from '$lib/components/Dice/Dice.svelte';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -17,9 +18,9 @@
 	function handleActiveId(newId: number | null) {
 		const prev = activeId;
 		activeId = newId;
-		if (newId === 1 || newId === 3 || newId === 4) {
+		if (newId === 1 || newId === 3 || newId === 4 || newId === 6) {
 			currentAudio = startDialogSFX;
-		} else if (prev === 1 || prev === 3 || prev === 4) {
+		} else if (prev === 1 || prev === 3 || prev === 4 || prev === 6) {
 			currentAudio = endDialogSFX;
 		} else if (newId === 2) {
 			currentAudio = thcOpenSFX;
@@ -58,6 +59,12 @@
 <div class="about-disco-container">
 	<CustomTab tabName="DISCO ELYSIUM" showing={activeId === 4} onclose={() => handleActiveId(null)}>
 		<AboutDisco />
+	</CustomTab>
+</div>
+
+<div class="dice-roll-container">
+	<CustomTab tabName="DICE ROLL" showing={activeId === 6} onclose={() => handleActiveId(null)}>
+		<Dice />
 	</CustomTab>
 </div>
 
@@ -106,6 +113,16 @@
 	}
 
 	.about-disco-container {
+		position: fixed;
+		top: 0;
+		left: 427px;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		z-index: 5;
+	}
+
+	.dice-roll-container {
 		position: fixed;
 		top: 0;
 		left: 427px;
