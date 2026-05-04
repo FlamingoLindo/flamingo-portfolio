@@ -12,5 +12,6 @@ words:
   - paraglide
   - pytest
   - SinaNova
+  - tapelet
 ignoreWords: []
 import: []

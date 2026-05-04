@@ -7,6 +7,8 @@
 	import thcOpenSFX from '$lib/assets/audios/sfx/thc_open.wav';
 	import thcCloseSFX from '$lib/assets/audios/sfx/thc_close.wav';
 	import ProjectsCabinet from '$lib/components/ProjectsCabinet/ProjectsCabinet.svelte';
+	import CustomTab from '$lib/components/CustomTab/CustomTab.svelte';
+	import Socials from '$lib/components/Socials/Socials.svelte';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -14,7 +16,6 @@
 	function handleActiveId(newId: number | null) {
 		const prev = activeId;
 		activeId = newId;
-
 		if (newId === 1) {
 			currentAudio = startDialogSFX;
 		} else if (prev === 1) {
@@ -23,6 +24,10 @@
 			currentAudio = thcOpenSFX;
 		} else if (prev === 2) {
 			currentAudio = thcCloseSFX;
+		} else if (newId === 3) {
+			currentAudio = startDialogSFX;
+		} else if (prev === 3) {
+			currentAudio = endDialogSFX;
 		} else {
 			currentAudio = null;
 		}
@@ -47,6 +52,12 @@
 	<ProjectsCabinet showing={activeId === 2} />
 </div>
 
+<div class="socials-container">
+	<CustomTab tabName="Socials" showing={activeId === 3} onclose={() => handleActiveId(null)}>
+		<Socials />
+	</CustomTab>
+</div>
+
 <BackGround />
 
 <style>
@@ -59,6 +70,7 @@
 		align-items: center;
 		z-index: 5;
 	}
+
 	.my-dialog-container {
 		position: fixed;
 		top: 0;
@@ -68,6 +80,7 @@
 		align-items: center;
 		z-index: 5;
 	}
+
 	.projects-cabinet-container {
 		position: fixed;
 		top: 0;
@@ -77,5 +90,16 @@
 		display: flex;
 		align-items: center;
 		z-index: 5;
+	}
+
+	.socials-container {
+		position: fixed;
+		top: 0;
+		left: 427px;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		z-index: 5;
+		/* no right: 0 — container is only as wide as the 500px panel */
 	}
 </style>
