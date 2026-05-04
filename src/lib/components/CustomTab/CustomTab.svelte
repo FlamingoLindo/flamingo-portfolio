@@ -5,7 +5,9 @@
 	import { getLocale } from '$lib/paraglide/runtime';
 	import contBtnEng from '$lib/assets/images/socials/button-cont.png';
 	import contBtnBr from '$lib/assets/images/socials/button-cont-pt-BR.png';
+	import clickSFX from '$lib/assets/audios/sfx/click.wav';
 	let lang = getLocale();
+	const clickAudio = new Audio(clickSFX);
 	let {
 		tabName,
 		showing,
@@ -19,6 +21,7 @@
 	} = $props();
 
 	function handleClose() {
+		clickAudio.play();
 		onclose?.();
 	}
 </script>
@@ -130,7 +133,7 @@
 
 	.title-banner {
 		display: block;
-		width: 30%;
+		width: 50%;
 		max-width: 360px;
 		height: auto;
 		object-fit: cover;
@@ -157,6 +160,8 @@
 		z-index: 1;
 		width: 100%;
 		flex: 1;
+		overflow-y: auto;
+		min-height: 0;
 	}
 
 	.cont-btn {

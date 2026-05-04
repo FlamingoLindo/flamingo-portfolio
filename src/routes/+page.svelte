@@ -9,6 +9,7 @@
 	import ProjectsCabinet from '$lib/components/ProjectsCabinet/ProjectsCabinet.svelte';
 	import CustomTab from '$lib/components/CustomTab/CustomTab.svelte';
 	import Socials from '$lib/components/Socials/Socials.svelte';
+	import AboutDisco from '$lib/components/AboutDisco/AboutDisco.svelte';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -16,18 +17,14 @@
 	function handleActiveId(newId: number | null) {
 		const prev = activeId;
 		activeId = newId;
-		if (newId === 1) {
+		if (newId === 1 || newId === 3 || newId === 4) {
 			currentAudio = startDialogSFX;
-		} else if (prev === 1) {
+		} else if (prev === 1 || prev === 3 || prev === 4) {
 			currentAudio = endDialogSFX;
 		} else if (newId === 2) {
 			currentAudio = thcOpenSFX;
 		} else if (prev === 2) {
 			currentAudio = thcCloseSFX;
-		} else if (newId === 3) {
-			currentAudio = startDialogSFX;
-		} else if (prev === 3) {
-			currentAudio = endDialogSFX;
 		} else {
 			currentAudio = null;
 		}
@@ -55,6 +52,12 @@
 <div class="socials-container">
 	<CustomTab tabName="Socials" showing={activeId === 3} onclose={() => handleActiveId(null)}>
 		<Socials />
+	</CustomTab>
+</div>
+
+<div class="about-disco-container">
+	<CustomTab tabName="DISCO ELYSIUM" showing={activeId === 4} onclose={() => handleActiveId(null)}>
+		<AboutDisco />
 	</CustomTab>
 </div>
 
@@ -100,6 +103,15 @@
 		display: flex;
 		align-items: center;
 		z-index: 5;
-		/* no right: 0 — container is only as wide as the 500px panel */
+	}
+
+	.about-disco-container {
+		position: fixed;
+		top: 0;
+		left: 427px;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		z-index: 5;
 	}
 </style>
