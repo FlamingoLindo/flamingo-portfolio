@@ -3,10 +3,12 @@
 	import closeBtnEng from '$lib/assets/images/thc/button_forget.png';
 	import closeBtnBr from '$lib/assets/images/thc/button_forget-pt-BR.png';
 	import clickSFX from '$lib/assets/audios/sfx/click.wav';
-	import type { IProjects } from '../ProjectsCabinet.svelte';
 	import { getLocale } from '$lib/paraglide/runtime';
+	import type { IProjects } from '../projects';
+	import * as m from '$lib/paraglide/messages';
 
 	let lang = getLocale();
+	let localeKey = $derived(lang === 'pt-br' ? 'ptBr' : 'en') as 'ptBr' | 'en';
 
 	let {
 		showingProject,
@@ -37,7 +39,13 @@
 		<div class="card-content">
 			<div class="project-image-wrapper">
 				{#if project.image?.full}
-					<img loading="lazy" decoding="async" src={project.image.full} alt="project" class="project-image" />
+					<img
+						loading="lazy"
+						decoding="async"
+						src={project.image.full}
+						alt="project"
+						class="project-image"
+					/>
 				{:else}
 					<div class="project-image placeholder"></div>
 				{/if}
@@ -48,25 +56,25 @@
 			</div>
 
 			<div class="stats">
-				<p>Main language: <span class="highlight">{project.data?.mainLanguage}</span></p>
+				<p>{m['Main language']()}: <span class="highlight">{project.data?.mainLanguage}</span></p>
 				<p>Stack: <span class="highlight-alt">{project.data?.stack}</span></p>
 			</div>
 
 			<div class="tabs">
 				<button class="tab" class:active={desc === 'problem'} onclick={() => (desc = 'problem')}>
-					PROBLEM
+					{m.PROBLEM()}
 				</button>
 				<span class="tab-divider">/</span>
 				<button class="tab" class:active={desc === 'solution'} onclick={() => (desc = 'solution')}>
-					SOLUTION
+					{m.SOLUTION()}
 				</button>
 			</div>
 
 			<div class="body-text">
 				{#if desc === 'problem'}
-					<p>{project.data?.problem}</p>
+					<p>{project.data?.problem[localeKey]}</p>
 				{:else}
-					<p>{project.data?.solution}</p>
+					<p>{project.data?.solution[localeKey]}</p>
 				{/if}
 			</div>
 
@@ -125,7 +133,7 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-        animation: jiggle 0.5s ease-out;
+		animation: jiggle 0.5s ease-out;
 	}
 
 	.card-bg {

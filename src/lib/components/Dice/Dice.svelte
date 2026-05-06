@@ -12,6 +12,7 @@
 	import successSFX from '$lib/assets/audios/sfx/dice_success.wav';
 	import failSFX from '$lib/assets/audios/sfx/dice_fail.wav';
 	import { browser } from '$app/environment';
+	import { m } from '$lib/paraglide/messages';
 
 	const diceImgs = [dice1Img, dice2Img, dice3Img, dice4Img, dice5Img, dice6Img];
 	let dc = $state<number | null>(null);
@@ -49,7 +50,7 @@
 </script>
 
 <div class="container">
-	<p class="label">Test your luck</p>
+	<p class="label">{m['Test your luck']()}</p>
 
 	{#if dc !== null}
 		<p class="dc-display">DC <span class="dc-num">{dc}</span></p>
@@ -57,17 +58,23 @@
 
 	{#if rolling}
 		<div class="placeholder rolling">
-			<span>Rolling...</span>
+			<span>{m.Rolling()}...</span>
 		</div>
 	{:else if rolled}
 		<div class="result-block">
-				<img loading="lazy" decoding="async" class="flare" alt="" src={success ? successImg : failureImg} />
+			<img
+				loading="lazy"
+				decoding="async"
+				class="flare"
+				alt=""
+				src={success ? successImg : failureImg}
+			/>
 			<span class="outcome-text" class:success class:failure={!success}>
-				{success ? 'CHECK SUCCESS' : 'CHECK FAILURE'}
+				{success ? m['CHECK SUCCESS']() : m['CHECK FAILURE']()}
 			</span>
 			<div class="dice-row">
-					<img loading="lazy" decoding="async" class="die" alt="dice1" src={dice1Path} />
-					<img loading="lazy" decoding="async" class="die" alt="dice2" src={dice2Path} />
+				<img loading="lazy" decoding="async" class="die" alt="dice1" src={dice1Path} />
+				<img loading="lazy" decoding="async" class="die" alt="dice2" src={dice2Path} />
 			</div>
 			<p class="totals">
 				<span class="total-num">{total}</span>
@@ -75,7 +82,7 @@
 		</div>
 	{:else}
 		<div class="placeholder">
-			<span>Click the dices to roll... </span>
+			<span>{m['Click the dices to roll']()}... </span>
 		</div>
 	{/if}
 

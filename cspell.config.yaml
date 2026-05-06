@@ -2,6 +2,7 @@ version: "0.2"
 ignorePaths:
   - .gitignore
   - src/lib/components/Dialog/dialogs.ts
+  - src/lib/components/ProjectsCabinet/projects.ts
 dictionaryDefinitions: []
 dictionaries:
   - pt-br

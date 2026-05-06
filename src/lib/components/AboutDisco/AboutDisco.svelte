@@ -1,91 +1,162 @@
 <script lang="ts">
+	import { getLocale } from '$lib/paraglide/runtime';
+	let lang = getLocale();
 </script>
 
 <div class="content">
 	<img
-		loading="lazy" decoding="async"
+		loading="lazy"
+		decoding="async"
 		src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg?t=1776259942"
-		alt="Disco Elysium – The Final Cut"
+		alt="Disco Elysium - The Final Cut"
 		class="banner"
 	/>
-
 	<div class="body">
-		<p class="lead">
-			A groundbreaking RPG where you're a detective with a unique skill system and a whole city to
-			carve your path across. Interrogate unforgettable characters, crack murders or take bribes.
-			Become a hero — or an absolute disaster of a human being.
-		</p>
-
-		<div class="divider"></div>
-
-		<h3>Origin</h3>
-		<img
-			loading="lazy" decoding="async"
-			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_dec29c440fab2f7817d68c1380c019290eb1755e.1920x1080.jpg?t=1776259942"
-			alt="Dialogue system"
-			class="section-img"
-		/>
-		<p>
-			Developed and published by ZA/UM, Disco Elysium was written and designed by a team led by
-			Estonian novelist <strong>Robert Kurvitz</strong> and executive producer
-			<strong>Kaur Kender</strong>, featuring a painterly art style and music by the English band
-			Sea Power. Released for Windows in October 2019, an expanded version with full voice acting —
-			<em>The Final Cut</em> — arrived on consoles in 2021.
-		</p>
-
-		<div class="divider"></div>
-
-		<h3>Gameplay</h3>
-		<img
-			loading="lazy" decoding="async"
-			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_9125a718ee9ba85386ae5d4eb820f3266073fc97.1920x1080.jpg?t=1776259942"
-			alt="Character sheet"
-			class="section-img"
-		/>
-		<p>
-			Disco Elysium follows a troubled detective with no memory of his identity. Rather than combat,
-			events are resolved through a system of <strong>24 skills</strong> — each representing a different
-			aspect of the protagonist's personality, and each capable of speaking directly to the player to
-			influence their decisions.
-		</p>
-
-		<div class="divider"></div>
-
-		<h3>Awards · The Game Awards 2019</h3>
-		<div class="chips">
-			<span class="chip">Best Independent Game</span>
-			<span class="chip">Best Narrative</span>
-			<span class="chip">Best Role Playing Game</span>
-			<span class="chip">Fresh Indie Game</span>
-		</div>
-
-		<div class="divider"></div>
-
-		<h3>Legacy</h3>
-		<img
-			loading="lazy" decoding="async"
-			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_fbd29930bbad721ce251391d5ec622917b416aed.1920x1080.jpg?t=1776259942"
-			alt="World exploration"
-			class="section-img"
-		/>
-		<p>
-			Disco Elysium received critical acclaim upon release, selling over
-			<strong>5 million copies</strong> and regarded as one of the greatest video games of all time. Internal
-			conflicts at ZA/UM around 2021 led several lead developers to depart. By October 2024, at least
-			four studios had announced spiritual successors.
-		</p>
-
-		<p class="source">
-			Text: <a
-				href="https://en-wikipedia-org.translate.goog/wiki/Disco_Elysium?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc"
-				target="_blank">Wikipedia</a
-			>
-			· Images:
-			<a
-				href="https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/"
-				target="_blank">Steam</a
-			>
-		</p>
+		{#if lang === 'pt-br'}
+			<p class="lead">
+				Um RPG inovador onde você é um detetive com um sistema de habilidades único e uma cidade
+				inteira para explorar. Interrogue personagens inesquecíveis, solucione assassinatos ou
+				aceite subornos. Torne-se um herói — ou um completo desastre de ser humano.
+			</p>
+			<div class="divider"></div>
+			<h3>Origem</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_dec29c440fab2f7817d68c1380c019290eb1755e.1920x1080.jpg?t=1776259942"
+				alt="Sistema de diálogo"
+				class="section-img"
+			/>
+			<p>
+				Desenvolvido e publicado pela ZA/UM, Disco Elysium foi escrito e projetado por uma equipe
+				liderada pelo romancista estoniano <strong>Robert Kurvitz</strong> e pelo produtor executivo
+				<strong>Kaur Kender</strong>, com um estilo artístico pictórico e música da banda inglesa
+				Sea Power. Lançado para Windows em outubro de 2019, uma versão expandida com dublagem
+				completa —
+				<em>The Final Cut</em> — chegou aos consoles em 2021.
+			</p>
+			<div class="divider"></div>
+			<h3>Jogabilidade</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_9125a718ee9ba85386ae5d4eb820f3266073fc97.1920x1080.jpg?t=1776259942"
+				alt="Ficha do personagem"
+				class="section-img"
+			/>
+			<p>
+				Disco Elysium acompanha um detetive perturbado sem memória de sua identidade. Em vez de
+				combate, os eventos são resolvidos por um sistema de <strong>24 habilidades</strong> — cada uma
+				representando um aspecto diferente da personalidade do protagonista, e cada uma capaz de falar
+				diretamente com o jogador para influenciar suas decisões.
+			</p>
+			<div class="divider"></div>
+			<h3>Prêmios · The Game Awards 2019</h3>
+			<div class="chips">
+				<span class="chip">Melhor Jogo Independente</span>
+				<span class="chip">Melhor Narrativa</span>
+				<span class="chip">Melhor RPG</span>
+				<span class="chip">Fresh Indie Game</span>
+			</div>
+			<div class="divider"></div>
+			<h3>Legado</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_fbd29930bbad721ce251391d5ec622917b416aed.1920x1080.jpg?t=1776259942"
+				alt="Exploração do mundo"
+				class="section-img"
+			/>
+			<p>
+				Disco Elysium recebeu aclamação crítica após seu lançamento, vendendo mais de
+				<strong>5 milhões de cópias</strong> e sendo considerado um dos maiores jogos de todos os tempos.
+				Conflitos internos na ZA/UM por volta de 2021 levaram vários desenvolvedores principais a sair.
+				Até outubro de 2024, pelo menos quatro estúdios haviam anunciado sucessores espirituais.
+			</p>
+			<p class="source">
+				Texto: <a
+					href="https://en-wikipedia-org.translate.goog/wiki/Disco_Elysium?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc"
+					target="_blank">Wikipedia</a
+				>
+				· Imagens:
+				<a
+					href="https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/"
+					target="_blank">Steam</a
+				>
+			</p>
+		{:else}
+			<p class="lead">
+				A groundbreaking RPG where you're a detective with a unique skill system and a whole city to
+				carve your path across. Interrogate unforgettable characters, crack murders or take bribes.
+				Become a hero — or an absolute disaster of a human being.
+			</p>
+			<div class="divider"></div>
+			<h3>Origin</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_dec29c440fab2f7817d68c1380c019290eb1755e.1920x1080.jpg?t=1776259942"
+				alt="Dialogue system"
+				class="section-img"
+			/>
+			<p>
+				Developed and published by ZA/UM, Disco Elysium was written and designed by a team led by
+				Estonian novelist <strong>Robert Kurvitz</strong> and executive producer
+				<strong>Kaur Kender</strong>, featuring a painterly art style and music by the English band
+				Sea Power. Released for Windows in October 2019, an expanded version with full voice acting
+				—
+				<em>The Final Cut</em> — arrived on consoles in 2021.
+			</p>
+			<div class="divider"></div>
+			<h3>Gameplay</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_9125a718ee9ba85386ae5d4eb820f3266073fc97.1920x1080.jpg?t=1776259942"
+				alt="Character sheet"
+				class="section-img"
+			/>
+			<p>
+				Disco Elysium follows a troubled detective with no memory of his identity. Rather than
+				combat, events are resolved through a system of <strong>24 skills</strong> — each representing
+				a different aspect of the protagonist's personality, and each capable of speaking directly to
+				the player to influence their decisions.
+			</p>
+			<div class="divider"></div>
+			<h3>Awards · The Game Awards 2019</h3>
+			<div class="chips">
+				<span class="chip">Best Independent Game</span>
+				<span class="chip">Best Narrative</span>
+				<span class="chip">Best Role Playing Game</span>
+				<span class="chip">Fresh Indie Game</span>
+			</div>
+			<div class="divider"></div>
+			<h3>Legacy</h3>
+			<img
+				loading="lazy"
+				decoding="async"
+				src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_fbd29930bbad721ce251391d5ec622917b416aed.1920x1080.jpg?t=1776259942"
+				alt="World exploration"
+				class="section-img"
+			/>
+			<p>
+				Disco Elysium received critical acclaim upon release, selling over
+				<strong>5 million copies</strong> and regarded as one of the greatest video games of all time.
+				Internal conflicts at ZA/UM around 2021 led several lead developers to depart. By October 2024,
+				at least four studios had announced spiritual successors.
+			</p>
+			<p class="source">
+				Text: <a
+					href="https://en-wikipedia-org.translate.goog/wiki/Disco_Elysium?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc"
+					target="_blank">Wikipedia</a
+				>
+				· Images:
+				<a
+					href="https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/"
+					target="_blank">Steam</a
+				>
+			</p>
+		{/if}
 	</div>
 </div>
 

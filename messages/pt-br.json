@@ -6,5 +6,16 @@
 	"Random Quote": "Falas do Jogo",
 	"Dice Roll": "Jogar Dados",
 	"Credits": "Créditos",
-	"Description": "Sou Engenheiro de Software com experiência prática em Controle de Qualidade, automação de testes e desenvolvimento front-end/back-end. Trabalho com qualquer stack, utilizando Python, TypeScript, Rust, Node.js, Svelte e React, além de bancos de dados como PostgreSQL. Tenho experiência em testes manuais e automatizados com ferramentas como Playwright, Selenium e pytest. Gosto de construir sistemas bem estruturados e transformar problemas do mundo real em soluções simples."
+	"Description": "Sou Engenheiro de Software com experiência prática em Controle de Qualidade, automação de testes e desenvolvimento front-end/back-end. Trabalho com qualquer stack, utilizando Python, TypeScript, Rust, Node.js, Svelte e React, além de bancos de dados como PostgreSQL. Tenho experiência em testes manuais e automatizados com ferramentas como Playwright, Selenium e pytest. Gosto de construir sistemas bem estruturados e transformar problemas do mundo real em soluções simples.",
+	"Main language": "Linguagem principal",
+	"PROBLEM": "PROBLEMA",
+	"SOLUTION": "SOLUÇÃO",
+	"SOCIALS": "CONTATO",
+	"DICE ROLL": "JOGAR DADOS",
+	"CREDITS": "CRÉDITOS",
+	"Test your luck": "Teste a sua sorte",
+	"Rolling": "Rolando",
+	"Click the dices to roll": "Clique nos dados para rolar",
+	"CHECK SUCCESS": "SUCESSO",
+	"CHECK FAILURE": "FALHA"
 }

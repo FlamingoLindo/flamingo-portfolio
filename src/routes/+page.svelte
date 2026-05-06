@@ -14,6 +14,7 @@
 	import Dialog from '$lib/components/Dialog/Dialog.svelte';
 	import { dialogs } from '$lib/components/Dialog/dialogs';
 	import Credits from '$lib/components/Credits/Credits.svelte';
+	import { m } from '$lib/paraglide/messages';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -67,7 +68,7 @@
 </div>
 
 <div class="socials-container">
-	<CustomTab tabName="Socials" showing={activeId === 3} onclose={() => handleActiveId(null)}>
+	<CustomTab tabName={m.SOCIALS()} showing={activeId === 3} onclose={() => handleActiveId(null)}>
 		<Socials />
 	</CustomTab>
 </div>
@@ -83,13 +84,17 @@
 </div>
 
 <div class="dice-roll-container">
-	<CustomTab tabName="DICE ROLL" showing={activeId === 6} onclose={() => handleActiveId(null)}>
+	<CustomTab
+		tabName={m['DICE ROLL']()}
+		showing={activeId === 6}
+		onclose={() => handleActiveId(null)}
+	>
 		<Dice />
 	</CustomTab>
 </div>
 
 <div class="dice-roll-container">
-	<CustomTab tabName="CREDITS" showing={activeId === 7} onclose={() => handleActiveId(null)}>
+	<CustomTab tabName={m.CREDITS()} showing={activeId === 7} onclose={() => handleActiveId(null)}>
 		<Credits />
 	</CustomTab>
 </div>

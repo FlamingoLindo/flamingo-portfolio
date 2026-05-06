@@ -6,5 +6,16 @@
 	"Random Quote": "Random Quote",
 	"Dice Roll": "Dice Roll",
 	"Credits": "Credits",
-	"Description": "I am a Software Engineer with practical experience in Quality Assurance, test automation, and front-end/back-end development. I work across the full stack using Python, TypeScript, Rust, Node.js, Svelte, and React, with databases like PostgreSQL. I have a background in manual and automated testing with tools like Playwright, Selenium, and pytest. I enjoy building well-structured systems and turning real-world problems into simple solutions."
+	"Description": "I am a Software Engineer with practical experience in Quality Assurance, test automation, and front-end/back-end development. I work across the full stack using Python, TypeScript, Rust, Node.js, Svelte, and React, with databases like PostgreSQL. I have a background in manual and automated testing with tools like Playwright, Selenium, and pytest. I enjoy building well-structured systems and turning real-world problems into simple solutions.",
+	"Main language": "Main language",
+	"PROBLEM": "PROBLEM",
+	"SOLUTION": "SOLUTION",
+	"SOCIALS": "SOCIALS",
+	"DICE ROLL": "DICE ROLL",
+	"CREDITS": "CREDITS",
+	"Test your luck": "Test your luck",
+	"Rolling": "Rolling",
+	"Click the dices to roll": "Click the dices to roll",
+	"CHECK SUCCESS": "CHECK SUCCESS",
+	"CHECK FAILURE": "CHECK FAILURE"
 }
