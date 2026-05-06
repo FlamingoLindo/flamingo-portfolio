@@ -61,13 +61,13 @@
 		</div>
 	{:else if rolled}
 		<div class="result-block">
-			<img class="flare" alt="" src={success ? successImg : failureImg} />
+				<img loading="lazy" decoding="async" class="flare" alt="" src={success ? successImg : failureImg} />
 			<span class="outcome-text" class:success class:failure={!success}>
 				{success ? 'CHECK SUCCESS' : 'CHECK FAILURE'}
 			</span>
 			<div class="dice-row">
-				<img class="die" alt="dice1" src={dice1Path} />
-				<img class="die" alt="dice2" src={dice2Path} />
+					<img loading="lazy" decoding="async" class="die" alt="dice1" src={dice1Path} />
+					<img loading="lazy" decoding="async" class="die" alt="dice2" src={dice2Path} />
 			</div>
 			<p class="totals">
 				<span class="total-num">{total}</span>
@@ -80,7 +80,7 @@
 	{/if}
 
 	<button class="roll-btn" onclick={rollDices} disabled={rolling}>
-		<img src={rollDiceImg} alt="roll" />
+		<img loading="lazy" decoding="async" src={rollDiceImg} alt="roll" />
 	</button>
 </div>
 

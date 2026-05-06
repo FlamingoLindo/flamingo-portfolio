@@ -170,26 +170,26 @@
 					</p>
 				{/each}
 			</div>
-			<img src={dialogFrame} alt="dialog-frame" class="dialog-img" />
+			<img loading="lazy" decoding="async" src={dialogFrame} alt="dialog-frame" class="dialog-img" />
 		</div>
 
 		<div class="internalize-btn">
 			<audio bind:this={audioEl} src={clickSFX}></audio>
 			{#if lang === 'en'}
 				<button onclick={handleInternalize}>
-					<img src={internalizeBtnENG} alt="internalize" />
+						<img loading="lazy" decoding="async" src={internalizeBtnENG} alt="internalize" />
 				</button>
 			{:else}
 				<button onclick={handleInternalize}>
-					<img src={internalizeBtnBR} alt="internalize" />
+					<img loading="lazy" decoding="async" src={internalizeBtnBR} alt="internalize" />
 				</button>
 			{/if}
 		</div>
 
 		<div class="portrait-wrapper">
 			<div class="portrait-animator">
-				<img src={portraitFrame} alt="por-frame" class="portrait" />
-				<img src={currentPortrait} alt="portrait" class="portrait-inner" />
+				<img loading="lazy" decoding="async" src={portraitFrame} alt="por-frame" class="portrait" />
+				<img loading="lazy" decoding="async" src={currentPortrait} alt="portrait" class="portrait-inner" />
 			</div>
 		</div>
 	</div>

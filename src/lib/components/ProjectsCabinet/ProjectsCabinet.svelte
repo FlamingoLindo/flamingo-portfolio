@@ -280,7 +280,7 @@
 
 {#if showing}
 	<div class="cabinet-wrapper" transition:fade={{ duration: 400 }}>
-		<img src={thcBG} alt="thcBG" class="thc-bg" />
+		<img loading="lazy" decoding="async" src={thcBG} alt="thcBG" class="thc-bg" />
 
 		<div class="projects-overlay">
 			<div class="projects-grid" style="width: {gridW}px; height: {gridH}px;">

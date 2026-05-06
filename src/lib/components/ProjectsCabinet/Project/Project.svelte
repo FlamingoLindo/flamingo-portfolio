@@ -31,12 +31,12 @@
 	<audio bind:this={audioEl} src={clickSFX}></audio>
 	<div class="image-wrapper">
 		{#if image?.icon}
-			<img src={image.icon} alt={title} class="project-icon" />
+			<img loading="lazy" decoding="async" src={image.icon} alt={title} class="project-icon" />
 		{/if}
-		<img src={thcThoughtContainer} alt="thc-t-c" class="thc-t-c" />
+		<img loading="lazy" decoding="async" src={thcThoughtContainer} alt="thc-t-c" class="thc-t-c" />
 	</div>
 	<div class="banner-wrapper">
-		<img src={thcTitleBanner} alt="thc-t-b" class="thc-t-b" />
+		<img loading="lazy" decoding="async" src={thcTitleBanner} alt="thc-t-b" class="thc-t-b" />
 		<span class="banner-title">{title}</span>
 	</div>
 </div>

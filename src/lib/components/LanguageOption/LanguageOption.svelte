@@ -11,7 +11,7 @@
 </script>
 
 <button title="language" class="flag-btn" onclick={toggleLocale}>
-	<img alt="language-flag" src={currentFlag} class="flag-img" />
+	<img loading="lazy" decoding="async" alt="language-flag" src={currentFlag} class="flag-img" />
 </button>
 
 <style lang="scss">

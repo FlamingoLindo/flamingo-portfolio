@@ -33,21 +33,21 @@
 		<div class="panel-header">
 			<div class="title-block">
 				<span class="tab-name">{tabName}</span>
-				<img class="title-banner" src={titleBanner} alt="title-banner" />
+				<img loading="lazy" decoding="async" class="title-banner" src={titleBanner} alt="title-banner" />
 			</div>
-			<img class="tape-bg" src={tapeBG} alt="tape-bg" />
+			<img loading="lazy" decoding="async" class="tape-bg" src={tapeBG} alt="tape-bg" />
 		</div>
 		<div class="panel-body">
 			{@render children?.()}
 		</div>
 		<button class="cont-btn" onclick={handleClose}>
 			{#if lang === 'en'}
-				<img src={contBtnEng} alt="cont-btn" />
+					<img loading="lazy" decoding="async" src={contBtnEng} alt="cont-btn" />
 			{:else}
-				<img src={contBtnBr} alt="cont-btn" />
+					<img loading="lazy" decoding="async" src={contBtnBr} alt="cont-btn" />
 			{/if}
 		</button>
-		<img class="tab-bg" src={tabBG} alt="tab-bg" />
+			<img loading="lazy" decoding="async" class="tab-bg" src={tabBG} alt="tab-bg" />
 	</div>
 {/if}
 

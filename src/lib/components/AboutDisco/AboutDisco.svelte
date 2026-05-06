@@ -3,6 +3,7 @@
 
 <div class="content">
 	<img
+		loading="lazy" decoding="async"
 		src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg?t=1776259942"
 		alt="Disco Elysium – The Final Cut"
 		class="banner"
@@ -19,6 +20,7 @@
 
 		<h3>Origin</h3>
 		<img
+			loading="lazy" decoding="async"
 			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_dec29c440fab2f7817d68c1380c019290eb1755e.1920x1080.jpg?t=1776259942"
 			alt="Dialogue system"
 			class="section-img"
@@ -35,6 +37,7 @@
 
 		<h3>Gameplay</h3>
 		<img
+			loading="lazy" decoding="async"
 			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_9125a718ee9ba85386ae5d4eb820f3266073fc97.1920x1080.jpg?t=1776259942"
 			alt="Character sheet"
 			class="section-img"
@@ -60,6 +63,7 @@
 
 		<h3>Legacy</h3>
 		<img
+			loading="lazy" decoding="async"
 			src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/632470/ss_fbd29930bbad721ce251391d5ec622917b416aed.1920x1080.jpg?t=1776259942"
 			alt="World exploration"
 			class="section-img"

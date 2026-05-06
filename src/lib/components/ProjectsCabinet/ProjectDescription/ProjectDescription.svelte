@@ -32,11 +32,15 @@
 {#if showingProject}
 	<div class="card">
 		<audio bind:this={audioEl} src={clickSFX}></audio>
-		<img src={thcTbg} alt="thc-t-bg" class="card-bg" />
+		<img loading="lazy" decoding="async" src={thcTbg} alt="thc-t-bg" class="card-bg" />
 
 		<div class="card-content">
 			<div class="project-image-wrapper">
-				<img src={project.image?.full} alt="project" class="project-image" />
+				{#if project.image?.full}
+					<img loading="lazy" decoding="async" src={project.image.full} alt="project" class="project-image" />
+				{:else}
+					<div class="project-image placeholder"></div>
+				{/if}
 			</div>
 
 			<div class="title-wrapper">
@@ -68,9 +72,9 @@
 
 			<button class="forget-btn" onclick={handleClose}>
 				{#if lang === 'en'}
-					<img src={closeBtnEng} alt="close-btn" />
+					<img loading="lazy" decoding="async" src={closeBtnEng} alt="close-btn" />
 				{:else}
-					<img src={closeBtnBr} alt="close-btn" />
+					<img loading="lazy" decoding="async" src={closeBtnBr} alt="close-btn" />
 				{/if}
 			</button>
 		</div>

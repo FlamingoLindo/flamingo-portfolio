@@ -33,12 +33,12 @@
 			onclick={() => handleClick(option.id)}
 		>
 			{#if activeId === option.id}
-				<img src={menuButton} alt="" class="option-bg" />
+				<img loading="lazy" decoding="async" src={menuButton} alt="" class="option-bg" />
 			{/if}
 			<span class="option-text">{option.text}</span>
 		</button>
 	{/each}
-	<img src={customFeld} alt="" class="custom-feld" />
+	<img loading="lazy" decoding="async" src={customFeld} alt="" class="custom-feld" />
 </div>
 
 <style lang="scss">

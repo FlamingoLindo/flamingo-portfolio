@@ -10,7 +10,7 @@
 
 {#if showing}
 	<div class="dialog-wrapper">
-		<img src={myDialog} alt="my-dialog" class="my-dialog" />
+		<img loading="lazy" decoding="async" src={myDialog} alt="my-dialog" class="my-dialog" />
 		<div class="dialog-text">
 			<p>
 				<em class="dialog-name">{name}</em> - <span class="dialog-description">{description}</span>
