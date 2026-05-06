@@ -37,7 +37,7 @@
 
 		if (browser) {
 			const audio = new Audio(success ? successSFX : failSFX);
-			audio.volume = 0.3;
+			audio.volume = 0.1;
 			audio.play();
 		}
 

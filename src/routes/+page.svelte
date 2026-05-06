@@ -13,6 +13,7 @@
 	import Dice from '$lib/components/Dice/Dice.svelte';
 	import Dialog from '$lib/components/Dialog/Dialog.svelte';
 	import { dialogs } from '$lib/components/Dialog/dialogs';
+	import Credits from '$lib/components/Credits/Credits.svelte';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -27,9 +28,9 @@
 			currentDialog = dialogs[Math.floor(Math.random() * dialogs.length)];
 		}
 
-		if (newId === 1 || newId === 3 || newId === 4 || newId === 5 || newId === 6) {
+		if (newId === 1 || newId === 3 || newId === 4 || newId === 5 || newId === 6 || newId === 7) {
 			currentAudio = startDialogSFX;
-		} else if (prev === 1 || prev === 3 || prev === 4 || prev === 5 || prev === 6) {
+		} else if (prev === 1 || prev === 3 || prev === 4 || prev === 5 || prev === 6 || prev === 7) {
 			currentAudio = endDialogSFX;
 		} else if (newId === 2) {
 			currentAudio = thcOpenSFX;
@@ -87,6 +88,12 @@
 	</CustomTab>
 </div>
 
+<div class="dice-roll-container">
+	<CustomTab tabName="CREDITS" showing={activeId === 7} onclose={() => handleActiveId(null)}>
+		<Credits />
+	</CustomTab>
+</div>
+
 <BackGround />
 
 <style>
@@ -132,6 +139,16 @@
 	}
 
 	.about-disco-container {
+		position: fixed;
+		top: 0;
+		left: 427px;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		z-index: 5;
+	}
+
+	.dice-roll-container {
 		position: fixed;
 		top: 0;
 		left: 427px;
