@@ -52,7 +52,7 @@
 			</div>
 
 			<div class="title-wrapper">
-				<h1 class="project-title">{project.title}</h1>
+				<a href={project.link} target="_blank"><h1 class="project-title">{project.title}</h1></a>
 			</div>
 
 			<div class="stats">
@@ -97,6 +97,10 @@
 	@font-face {
 		font-family: 'Dobra-Light';
 		src: url('/fonts/Dobra-Light.otf') format('opentype');
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	@keyframes jiggle {
@@ -192,7 +196,7 @@
 	.stats {
 		padding: 10px 14px 6px;
 		font-family: 'Dobra-Light', sans-serif;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		color: #ccc;
 		display: flex;
 		flex-direction: column;
@@ -249,6 +253,7 @@
 		color: #bbb;
 		line-height: 1.55;
 		flex: 1;
+		overflow-y: auto;
 		p {
 			margin: 0;
 		}
