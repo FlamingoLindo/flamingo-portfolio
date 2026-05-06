@@ -1,22 +1,43 @@
 version: "0.2"
 ignorePaths:
   - .gitignore
+  - src/lib/components/Dialog/dialogs.ts
 dictionaryDefinitions: []
 dictionaries:
   - pt-br
 words:
+  - ACELE
+  - CUNOESSE
+  - DICEMAKER
+  - evrart
   - feld
+  - HARDIE
   - iconify
   - inlang
   - Kaur
   - Kender
+  - KITSURAGI
+  - KLAASJE
   - Kurvitz
+  - MEASUREHEAD
+  - NOID
   - noplus
   - notif
   - osts
   - paraglide
+  - PISSF
+  - portrait_kitsuragi
+  - portrait_measurehead
+  - portrait_pissfart
+  - portrait_shanky
+  - portraitframe
+  - portraitPissfart
   - pytest
+  - SAVOIR
+  - SHANKY
   - SinaNova
+  - SOONA
   - tapelet
+  - THEO
 ignoreWords: []
 import: []

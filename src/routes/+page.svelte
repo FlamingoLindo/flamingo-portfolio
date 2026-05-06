@@ -11,16 +11,25 @@
 	import Socials from '$lib/components/Socials/Socials.svelte';
 	import AboutDisco from '$lib/components/AboutDisco/AboutDisco.svelte';
 	import Dice from '$lib/components/Dice/Dice.svelte';
+	import Dialog from '$lib/components/Dialog/Dialog.svelte';
+	import { dialogs } from '$lib/components/Dialog/dialogs';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
+	let currentDialog = $state(dialogs[0]);
+	let audioVolume = 0.3;
 
 	function handleActiveId(newId: number | null) {
 		const prev = activeId;
 		activeId = newId;
-		if (newId === 1 || newId === 3 || newId === 4 || newId === 6) {
+
+		if (newId === 5) {
+			currentDialog = dialogs[Math.floor(Math.random() * dialogs.length)];
+		}
+
+		if (newId === 1 || newId === 3 || newId === 4 || newId === 5 || newId === 6) {
 			currentAudio = startDialogSFX;
-		} else if (prev === 1 || prev === 3 || prev === 4 || prev === 6) {
+		} else if (prev === 1 || prev === 3 || prev === 4 || prev === 5 || prev === 6) {
 			currentAudio = endDialogSFX;
 		} else if (newId === 2) {
 			currentAudio = thcOpenSFX;
@@ -34,7 +43,13 @@
 
 {#if currentAudio}
 	{#key currentAudio}
-		<audio autoplay src={currentAudio}></audio>
+		<audio
+			autoplay
+			src={currentAudio}
+			oncanplay={(e) => {
+				(e.target as HTMLAudioElement).volume = audioVolume;
+			}}
+		></audio>
 	{/key}
 {/if}
 
@@ -60,6 +75,10 @@
 	<CustomTab tabName="DISCO ELYSIUM" showing={activeId === 4} onclose={() => handleActiveId(null)}>
 		<AboutDisco />
 	</CustomTab>
+</div>
+
+<div class="my-dialog-container">
+	<Dialog showing={activeId === 5} dialog={currentDialog} />
 </div>
 
 <div class="dice-roll-container">

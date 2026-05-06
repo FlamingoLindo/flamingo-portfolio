@@ -37,6 +37,7 @@
 
 		if (browser) {
 			const audio = new Audio(success ? successSFX : failSFX);
+			audio.volume = 0.3;
 			audio.play();
 		}
 
@@ -157,6 +158,16 @@
 		object-fit: cover;
 		opacity: 0.9;
 		z-index: 0;
+		animation: fadeIn 0.6s ease-out;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 0.9;
+		}
 	}
 
 	.dice-row {
