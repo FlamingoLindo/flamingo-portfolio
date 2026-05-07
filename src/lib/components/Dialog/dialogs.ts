@@ -16,7 +16,7 @@ export const dialogs: TDialog[] = [
     {
         id: 1,
         portraitSpeaker: 'SHIVERS',
-        audio: '/src/lib/assets/audios/dialogues/shivers_church_revachol.mp3',
+        audio: '//dialogues/shivers_church_revachol.mp3',
         dialog: [
             {
                 id: 1,
@@ -107,7 +107,7 @@ export const dialogs: TDialog[] = [
     {
         id: 2,
         portraitSpeaker: 'CONCEPTUALIZATION',
-        audio: 'src/lib/assets/audios/dialogues/conceptualization_fail.wav',
+        audio: '/dialogues/conceptualization_fail.wav',
         dialog: [
             {
                 id: 1,
@@ -120,7 +120,7 @@ export const dialogs: TDialog[] = [
     {
         id: 3,
         portraitSpeaker: "KIM KITSURAGI",
-        audio: '/src/lib/assets/audios/dialogues/kim_school_of_thought.mp3',
+        audio: '//dialogues/kim_school_of_thought.mp3',
         dialog: [
             {
                 id: 1,
@@ -145,7 +145,7 @@ export const dialogs: TDialog[] = [
     {
         id: 4,
         portraitSpeaker: "ALAIN",
-        audio: 'src/lib/assets/audios/dialogues/alain_cerdo.mp3',
+        audio: '/dialogues/alain_cerdo.mp3',
         dialog: [
             {
                 id: 1,
@@ -164,7 +164,7 @@ export const dialogs: TDialog[] = [
     {
         id: 5,
         portraitSpeaker: "EUGENE",
-        audio: 'src/lib/assets/audios/dialogues/eugene.mp3',
+        audio: '/dialogues/eugene.mp3',
         dialog: [
             {
                 id: 1,
@@ -183,7 +183,7 @@ export const dialogs: TDialog[] = [
     {
         id: 6,
         portraitSpeaker: "FAT ANGUS",
-        audio: 'src/lib/assets/audios/dialogues/fat_angus_piss.mp3',
+        audio: '/dialogues/fat_angus_piss.mp3',
         dialog: [
             {
                 id: 1,
@@ -202,7 +202,7 @@ export const dialogs: TDialog[] = [
     {
         id: 7,
         portraitSpeaker: "GLEN",
-        audio: 'src/lib/assets/audios/dialogues/glen_dip_shit.mp3',
+        audio: '/dialogues/glen_dip_shit.mp3',
         dialog: [
             {
                 id: 1,
@@ -215,7 +215,7 @@ export const dialogs: TDialog[] = [
     {
         id: 8,
         portraitSpeaker: "RUBY",
-        audio: 'src/lib/assets/audios/dialogues/ruby_puta_madre.mp3',
+        audio: '/dialogues/ruby_puta_madre.mp3',
         dialog: [
             {
                 id: 1,
@@ -234,7 +234,7 @@ export const dialogs: TDialog[] = [
     {
         id: 9,
         portraitSpeaker: "SHANKY",
-        audio: 'src/lib/assets/audios/dialogues/shanky_factory.mp3',
+        audio: '/dialogues/shanky_factory.mp3',
         dialog: [
             {
                 id: 1,
@@ -247,7 +247,7 @@ export const dialogs: TDialog[] = [
     {
         id: 10,
         portraitSpeaker: "THEO",
-        audio: 'src/lib/assets/audios/dialogues/theo.mp3',
+        audio: '/dialogues/theo.mp3',
         dialog: [
             {
                 id: 1,
@@ -272,7 +272,7 @@ export const dialogs: TDialog[] = [
     {
         id: 11,
         portraitSpeaker: "TITUS HARDIE",
-        audio: 'src/lib/assets/audios/dialogues/titus.mp3',
+        audio: '/dialogues/titus.mp3',
         dialog: [
             {
                 id: 1,
@@ -297,7 +297,7 @@ export const dialogs: TDialog[] = [
     {
         id: 12,
         portraitSpeaker: "CALL ME MAÑANA",
-        audio: 'src/lib/assets/audios/dialogues/call_me_manana.mp3',
+        audio: '/dialogues/call_me_manana.mp3',
         dialog: [
             {
                 id: 1,
@@ -340,7 +340,7 @@ export const dialogs: TDialog[] = [
     {
         id: 13,
         portraitSpeaker: "THE GARDENER",
-        audio: 'src/lib/assets/audios/dialogues/the_gardener.mp3',
+        audio: '/dialogues/the_gardener.mp3',
         dialog: [
             {
                 id: 1,
@@ -371,7 +371,7 @@ export const dialogs: TDialog[] = [
     {
         id: 14,
         portraitSpeaker: "EVRART CLAIRE",
-        audio: 'src/lib/assets/audios/dialogues/evrart_claire.mp3',
+        audio: '/dialogues/evrart_claire.mp3',
         dialog: [
             {
                 id: 1,
@@ -390,7 +390,7 @@ export const dialogs: TDialog[] = [
     {
         id: 15,
         portraitSpeaker: "MEASUREHEAD",
-        audio: 'src/lib/assets/audios/dialogues/measurehead.mp3',
+        audio: '/dialogues/measurehead.mp3',
         dialog: [
             {
                 id: 1,
@@ -415,7 +415,7 @@ export const dialogs: TDialog[] = [
     {
         id: 16,
         portraitSpeaker: "JOYCE MESSIER",
-        audio: 'src/lib/assets/audios/dialogues/joyce_messier.mp3',
+        audio: '/dialogues/joyce_messier.mp3',
         dialog: [
             {
                 id: 1,
@@ -440,7 +440,7 @@ export const dialogs: TDialog[] = [
     {
         id: 17,
         portraitSpeaker: "SOONA",
-        audio: 'src/lib/assets/audios/dialogues/soona.mp3',
+        audio: '/dialogues/soona.mp3',
         dialog: [
             {
                 id: 1,
@@ -465,7 +465,7 @@ export const dialogs: TDialog[] = [
     {
         id: 18,
         portraitSpeaker: "TIAGO",
-        audio: 'src/lib/assets/audios/dialogues/tiago.mp3',
+        audio: '/dialogues/tiago.mp3',
         dialog: [
             {
                 id: 1,
@@ -502,7 +502,7 @@ export const dialogs: TDialog[] = [
     {
         id: 19,
         portraitSpeaker: "ACELE",
-        audio: 'src/lib/assets/audios/dialogues/acele.mp3',
+        audio: '/dialogues/acele.mp3',
         dialog: [
             {
                 id: 1,
@@ -551,7 +551,7 @@ export const dialogs: TDialog[] = [
     {
         id: 20,
         portraitSpeaker: "ANDRE",
-        audio: 'src/lib/assets/audios/dialogues/andre.mp3',
+        audio: '/dialogues/andre.mp3',
         dialog: [
             {
                 id: 1,
@@ -564,7 +564,7 @@ export const dialogs: TDialog[] = [
     {
         id: 21,
         portraitSpeaker: "EGG HEAD",
-        audio: 'src/lib/assets/audios/dialogues/egg_head.mp3',
+        audio: '/dialogues/egg_head.mp3',
         dialog: [
             {
                 id: 1,
@@ -577,7 +577,7 @@ export const dialogs: TDialog[] = [
     {
         id: 22,
         portraitSpeaker: "NOID",
-        audio: 'src/lib/assets/audios/dialogues/noid.mp3',
+        audio: '/dialogues/noid.mp3',
         dialog: [
             {
                 id: 1,
@@ -596,7 +596,7 @@ export const dialogs: TDialog[] = [
     {
         id: 23,
         portraitSpeaker: "NOVELTY DICEMAKER",
-        audio: 'src/lib/assets/audios/dialogues/novelty_dicemaker.mp3',
+        audio: '/dialogues/novelty_dicemaker.mp3',
         dialog: [
             {
                 id: 1,
@@ -633,7 +633,7 @@ export const dialogs: TDialog[] = [
     {
         id: 24,
         portraitSpeaker: "CUNO",
-        audio: 'src/lib/assets/audios/dialogues/cuno.mp3',
+        audio: '/dialogues/cuno.mp3',
         dialog: [
             {
                 id: 1,
@@ -652,7 +652,7 @@ export const dialogs: TDialog[] = [
     {
         id: 25,
         portraitSpeaker: "CUNOESSE",
-        audio: 'src/lib/assets/audios/dialogues/cunoesse.mp3',
+        audio: '/dialogues/cunoesse.mp3',
         dialog: [
             {
                 id: 1,
@@ -671,7 +671,7 @@ export const dialogs: TDialog[] = [
     {
         id: 26,
         portraitSpeaker: "FUCK THE WORLD",
-        audio: 'src/lib/assets/audios/dialogues/fuck_the_world.mp3',
+        audio: '/dialogues/fuck_the_world.mp3',
         dialog: [
             {
                 id: 1,
@@ -684,7 +684,7 @@ export const dialogs: TDialog[] = [
     {
         id: 27,
         portraitSpeaker: "KLAASJE",
-        audio: 'src/lib/assets/audios/dialogues/klaasje.mp3',
+        audio: '/dialogues/klaasje.mp3',
         dialog: [
             {
                 id: 1,
@@ -775,7 +775,7 @@ export const dialogs: TDialog[] = [
     {
         id: 28,
         portraitSpeaker: "PISSF****T",
-        audio: 'src/lib/assets/audios/dialogues/pissft.mp3',
+        audio: '/dialogues/pissft.mp3',
         dialog: [
             {
                 id: 1,
@@ -830,7 +830,7 @@ export const dialogs: TDialog[] = [
     {
         id: 29,
         portraitSpeaker: "DOLORES DEI",
-        audio: 'src/lib/assets/audios/dialogues/dolores_dei.mp3',
+        audio: '/dialogues/dolores_dei.mp3',
         dialog: [
             {
                 id: 1,
@@ -879,7 +879,7 @@ export const dialogs: TDialog[] = [
     {
         id: 30,
         portraitSpeaker: "ANCIENT REPTILIAN BRAIN",
-        audio: 'src/lib/assets/audios/dialogues/ancient_reptilian_brain.mp3',
+        audio: '/dialogues/ancient_reptilian_brain.mp3',
         dialog: [
             {
                 id: 1,
@@ -904,7 +904,7 @@ export const dialogs: TDialog[] = [
     {
         id: 31,
         portraitSpeaker: "LIMBIC SYSTEM",
-        audio: 'src/lib/assets/audios/dialogues/limbic_system.mp3',
+        audio: '/dialogues/limbic_system.mp3',
         dialog: [
             {
                 id: 1,
@@ -935,7 +935,7 @@ export const dialogs: TDialog[] = [
     {
         id: 32,
         portraitSpeaker: "SPINAL CORD",
-        audio: 'src/lib/assets/audios/dialogues/spinal_cord.mp3',
+        audio: '/dialogues/spinal_cord.mp3',
         dialog: [
             {
                 id: 1,
@@ -960,7 +960,7 @@ export const dialogs: TDialog[] = [
     {
         id: 33,
         portraitSpeaker: "HORRIFIC NECKTIE",
-        audio: 'src/lib/assets/audios/dialogues/horrific_necktie.mp3',
+        audio: '/dialogues/horrific_necktie.mp3',
         dialog: [
             {
                 id: 1,
@@ -979,7 +979,7 @@ export const dialogs: TDialog[] = [
     {
         id: 34,
         portraitSpeaker: "LOGIC",
-        audio: 'src/lib/assets/audios/dialogues/logic.mp3',
+        audio: '/dialogues/logic.mp3',
         dialog: [
             {
                 id: 1,
@@ -992,7 +992,7 @@ export const dialogs: TDialog[] = [
     {
         id: 35,
         portraitSpeaker: "ENCYCLOPEDIA",
-        audio: 'src/lib/assets/audios/dialogues/encyclopedia.mp3',
+        audio: '/dialogues/encyclopedia.mp3',
         dialog: [
             {
                 id: 1,
@@ -1011,7 +1011,7 @@ export const dialogs: TDialog[] = [
     {
         id: 36,
         portraitSpeaker: "RHETORIC",
-        audio: 'src/lib/assets/audios/dialogues/rhetoric.mp3',
+        audio: '/dialogues/rhetoric.mp3',
         dialog: [
             {
                 id: 1,
@@ -1048,7 +1048,7 @@ export const dialogs: TDialog[] = [
     {
         id: 37,
         portraitSpeaker: "DRAMA",
-        audio: 'src/lib/assets/audios/dialogues/drama.mp3',
+        audio: '/dialogues/drama.mp3',
         dialog: [
             {
                 id: 1,
@@ -1061,7 +1061,7 @@ export const dialogs: TDialog[] = [
     {
         id: 38,
         portraitSpeaker: "CONCEPTUALIZATION",
-        audio: 'src/lib/assets/audios/dialogues/conceptualization_atoms.mp3',
+        audio: '/dialogues/conceptualization_atoms.mp3',
         dialog: [
             {
                 id: 1,
@@ -1074,7 +1074,7 @@ export const dialogs: TDialog[] = [
     {
         id: 39,
         portraitSpeaker: "VISUAL CALCULUS",
-        audio: 'src/lib/assets/audios/dialogues/visual_calculus.mp3',
+        audio: '/dialogues/visual_calculus.mp3',
         dialog: [
             {
                 id: 1,
@@ -1087,7 +1087,7 @@ export const dialogs: TDialog[] = [
     {
         id: 40,
         portraitSpeaker: "VOLITION",
-        audio: 'src/lib/assets/audios/dialogues/volition.mp3',
+        audio: '/dialogues/volition.mp3',
         dialog: [
             {
                 id: 1,
@@ -1100,7 +1100,7 @@ export const dialogs: TDialog[] = [
     {
         id: 40,
         portraitSpeaker: "INLAND EMPIRE",
-        audio: 'src/lib/assets/audios/dialogues/inland_empire.mp3',
+        audio: '/dialogues/inland_empire.mp3',
         dialog: [
             {
                 id: 1,
@@ -1113,7 +1113,7 @@ export const dialogs: TDialog[] = [
     {
         id: 41,
         portraitSpeaker: "EMPATHY",
-        audio: 'src/lib/assets/audios/dialogues/empathy.mp3',
+        audio: '/dialogues/empathy.mp3',
         dialog: [
             {
                 id: 1,
@@ -1126,7 +1126,7 @@ export const dialogs: TDialog[] = [
     {
         id: 42,
         portraitSpeaker: "AUTHORITY",
-        audio: 'src/lib/assets/audios/dialogues/authority.mp3',
+        audio: '/dialogues/authority.mp3',
         dialog: [
             {
                 id: 1,
@@ -1139,7 +1139,7 @@ export const dialogs: TDialog[] = [
     {
         id: 43,
         portraitSpeaker: "ESPRIT DE CORPS",
-        audio: 'src/lib/assets/audios/dialogues/esprit_de_corps.mp3',
+        audio: '/dialogues/esprit_de_corps.mp3',
         dialog: [
             {
                 id: 1,
@@ -1152,7 +1152,7 @@ export const dialogs: TDialog[] = [
     {
         id: 44,
         portraitSpeaker: "SUGGESTION",
-        audio: 'src/lib/assets/audios/dialogues/suggestion.mp3',
+        audio: '/dialogues/suggestion.mp3',
         dialog: [
             {
                 id: 1,
@@ -1165,7 +1165,7 @@ export const dialogs: TDialog[] = [
     {
         id: 45,
         portraitSpeaker: "ENDURANCE",
-        audio: 'src/lib/assets/audios/dialogues/endurance.mp3',
+        audio: '/dialogues/endurance.mp3',
         dialog: [
             {
                 id: 1,
@@ -1202,7 +1202,7 @@ export const dialogs: TDialog[] = [
     {
         id: 46,
         portraitSpeaker: "PAIN THRESHOLD",
-        audio: 'src/lib/assets/audios/dialogues/pain_threshold.mp3',
+        audio: '/dialogues/pain_threshold.mp3',
         dialog: [
             {
                 id: 1,
@@ -1215,7 +1215,7 @@ export const dialogs: TDialog[] = [
     {
         id: 47,
         portraitSpeaker: "PHYSICAL INSTRUMENT",
-        audio: 'src/lib/assets/audios/dialogues/physical_instrument.mp3',
+        audio: '/dialogues/physical_instrument.mp3',
         dialog: [
             {
                 id: 1,
@@ -1228,7 +1228,7 @@ export const dialogs: TDialog[] = [
     {
         id: 48,
         portraitSpeaker: "ELECTROCHEMISTRY",
-        audio: 'src/lib/assets/audios/dialogues/electrochemistry.mp3',
+        audio: '/dialogues/electrochemistry.mp3',
         dialog: [
             {
                 id: 1,
@@ -1241,7 +1241,7 @@ export const dialogs: TDialog[] = [
     {
         id: 49,
         portraitSpeaker: "HALF LIGHT",
-        audio: 'src/lib/assets/audios/dialogues/half_light.mp3',
+        audio: '/dialogues/half_light.mp3',
         dialog: [
             {
                 id: 1,
@@ -1266,7 +1266,7 @@ export const dialogs: TDialog[] = [
     {
         id: 50,
         portraitSpeaker: "HAND/EYE COORDINATION",
-        audio: 'src/lib/assets/audios/dialogues/hand_eye_coordination.mp3',
+        audio: '/dialogues/hand_eye_coordination.mp3',
         dialog: [
             {
                 id: 1,
@@ -1279,7 +1279,7 @@ export const dialogs: TDialog[] = [
     {
         id: 51,
         portraitSpeaker: "PERCEPTION",
-        audio: 'src/lib/assets/audios/dialogues/perception.mp3',
+        audio: '/dialogues/perception.mp3',
         dialog: [
             {
                 id: 1,
@@ -1292,7 +1292,7 @@ export const dialogs: TDialog[] = [
     {
         id: 52,
         portraitSpeaker: "REACTION SPEED",
-        audio: 'src/lib/assets/audios/dialogues/reaction_speed.mp3',
+        audio: '/dialogues/reaction_speed.mp3',
         dialog: [
             {
                 id: 1,
@@ -1305,7 +1305,7 @@ export const dialogs: TDialog[] = [
     {
         id: 53,
         portraitSpeaker: "SAVOIR FAIRE",
-        audio: 'src/lib/assets/audios/dialogues/savoir_faire.mp3',
+        audio: '/dialogues/savoir_faire.mp3',
         dialog: [
             {
                 id: 1,
@@ -1324,7 +1324,7 @@ export const dialogs: TDialog[] = [
     {
         id: 54,
         portraitSpeaker: "INTERFACING",
-        audio: 'src/lib/assets/audios/dialogues/interfacing.mp3',
+        audio: '/dialogues/interfacing.mp3',
         dialog: [
             {
                 id: 1,
@@ -1343,7 +1343,7 @@ export const dialogs: TDialog[] = [
     {
         id: 55,
         portraitSpeaker: "COMPOSURE",
-        audio: 'src/lib/assets/audios/dialogues/composure.mp3',
+        audio: '/dialogues/composure.mp3',
         dialog: [
             {
                 id: 1,
@@ -1362,7 +1362,7 @@ export const dialogs: TDialog[] = [
     {
         id: 56,
         portraitSpeaker: "JOYCE MESSIER",
-        audio: 'src/lib/assets/audios/dialogues/apres.mp3',
+        audio: '/dialogues/apres.mp3',
         dialog: [
             {
                 id: 1,
