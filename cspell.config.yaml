@@ -3,6 +3,8 @@ ignorePaths:
   - .gitignore
   - src/lib/components/Dialog/dialogs.ts
   - src/lib/components/ProjectsCabinet/projects.ts
+  - .dockerignore
+  - Dockerfile
 dictionaryDefinitions: []
 dictionaries:
   - pt-br
