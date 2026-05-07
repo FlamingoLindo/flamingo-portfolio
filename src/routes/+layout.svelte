@@ -8,7 +8,8 @@
 	let { children } = $props();
 </script>
 
-<!-- <svelte:head><link rel="icon" href={favicon} /></svelte:head> -->
+<!-- <link rel="icon" href={favicon} /> -->
+<svelte:head><title>Flamingo Portfolio</title></svelte:head>
 {@render children()}
 
 <div style="display:none">
