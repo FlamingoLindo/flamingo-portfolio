@@ -1,11 +1,10 @@
 <script lang="ts">
-	import bgParallax from '$lib/assets/animated/bg_parallax.mp4';
 	import LanguageOption from '../LanguageOption/LanguageOption.svelte';
 	import MusicBox from '../MusicBox/MusicBox.svelte';
 </script>
 
 <video class="bg-parallax" autoplay loop muted playsinline>
-	<source src={bgParallax} type="video/mp4" />
+	<source src="/bg_parallax.mp4" type="video/mp4" />
 </video>
 
 <div class="music-box-wrapper">
