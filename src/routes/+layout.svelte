@@ -29,13 +29,20 @@
 			add(img.src);
 			try {
 				add((img as HTMLImageElement).currentSrc);
-			} catch (e) { void e; }
+			} catch (e) {
+				void e;
+			}
 		}
 
 		// <source srcset>
-		for (const src of Array.from(document.querySelectorAll('source[srcset]')) as HTMLSourceElement[]) {
+		for (const src of Array.from(
+			document.querySelectorAll('source[srcset]')
+		) as HTMLSourceElement[]) {
 			const ss = src.getAttribute('srcset') || '';
-			ss.split(',').map(s => s.trim().split(' ')[0]).filter(Boolean).forEach(u => add(u));
+			ss.split(',')
+				.map((s) => s.trim().split(' ')[0])
+				.filter(Boolean)
+				.forEach((u) => add(u));
 		}
 
 		// background-image from computed styles
@@ -48,7 +55,9 @@
 				while ((m = urlRegex.exec(style)) !== null) {
 					if (m[1]) add(m[1]);
 				}
-			} catch (e) { void e; }
+			} catch (e) {
+				void e;
+			}
 		}
 
 		return urls;
@@ -66,52 +75,27 @@
 
 			for (const url of urls) {
 				const img = new Image();
-				img.onload = () => { loaded += 1; update(); if (loaded === total) resolvePromise(); };
-				img.onerror = () => { loaded += 1; update(); if (loaded === total) resolvePromise(); };
+				img.onload = () => {
+					loaded += 1;
+					update();
+					if (loaded === total) resolvePromise();
+				};
+				img.onerror = () => {
+					loaded += 1;
+					update();
+					if (loaded === total) resolvePromise();
+				};
 				// add cache-busting protection? not needed
 				img.src = url;
 			}
 		});
 	}
 
-	function waitForVideos() {
-		const videos = Array.from(document.querySelectorAll('video')) as HTMLVideoElement[];
-
-		if (!videos.length) {
-			return Promise.resolve();
-		}
-
-		return Promise.all(
-			videos.map((video) => {
-				if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-					return Promise.resolve();
-				}
-
-				return new Promise<void>((resolvePromise) => {
-					const cleanup = () => {
-						video.removeEventListener('loadeddata', onReady);
-						video.removeEventListener('canplaythrough', onReady);
-						video.removeEventListener('error', onReady);
-					};
-
-					const onReady = () => {
-						cleanup();
-						resolvePromise();
-					};
-
-					video.addEventListener('loadeddata', onReady, { once: true });
-					video.addEventListener('canplaythrough', onReady, { once: true });
-					video.addEventListener('error', onReady, { once: true });
-				});
-			})
-		).then(() => undefined);
-	}
-
 	onMount(async () => {
 		// Wait one microtask to let children mount and register images
 		await Promise.resolve();
 		const urls = getImageUrls();
-		await Promise.all([preloadImages(urls), waitForVideos()]);
+		await Promise.all([preloadImages(urls)]);
 		loading = false;
 	});
 </script>

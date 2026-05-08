@@ -1,9 +1,22 @@
 <script lang="ts">
 	import LanguageOption from '../LanguageOption/LanguageOption.svelte';
 	import MusicBox from '../MusicBox/MusicBox.svelte';
+
+	let videoLoaded = $state(false);
 </script>
 
-<video class="bg-parallax" autoplay loop muted playsinline preload="auto" poster="/fallback_bg.png">
+<img class="bg-fallback" src="/fallback_bg.png" alt="" aria-hidden="true" />
+
+<video
+	class="bg-parallax"
+	class:loaded={videoLoaded}
+	autoplay
+	loop
+	muted
+	playsinline
+	preload="auto"
+	oncanplaythrough={() => (videoLoaded = true)}
+>
 	<source src="/bg_parallax.mp4" type="video/mp4" />
 </video>
 
@@ -13,14 +26,28 @@
 </div>
 
 <style lang="scss">
+	.bg-fallback,
 	.bg-parallax {
 		position: fixed;
 		inset: 0;
 		width: 100vw;
 		height: 100vh;
 		object-fit: cover;
-		z-index: -1;
 		pointer-events: none;
+	}
+
+	.bg-fallback {
+		z-index: -2;
+	}
+
+	.bg-parallax {
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+
+		&.loaded {
+			opacity: 1;
+		}
 	}
 
 	.music-box-wrapper {
