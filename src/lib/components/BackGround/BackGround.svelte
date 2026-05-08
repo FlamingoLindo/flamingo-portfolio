@@ -3,7 +3,7 @@
 	import MusicBox from '../MusicBox/MusicBox.svelte';
 </script>
 
-<video class="bg-parallax" autoplay loop muted playsinline preload="auto">
+<video class="bg-parallax" autoplay loop muted playsinline preload="auto" poster="/fallback_bg.png">
 	<source src="/bg_parallax.mp4" type="video/mp4" />
 </video>
 
