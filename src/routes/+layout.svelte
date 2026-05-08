@@ -74,15 +74,44 @@
 		});
 	}
 
+	function waitForVideos() {
+		const videos = Array.from(document.querySelectorAll('video')) as HTMLVideoElement[];
+
+		if (!videos.length) {
+			return Promise.resolve();
+		}
+
+		return Promise.all(
+			videos.map((video) => {
+				if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+					return Promise.resolve();
+				}
+
+				return new Promise<void>((resolvePromise) => {
+					const cleanup = () => {
+						video.removeEventListener('loadeddata', onReady);
+						video.removeEventListener('canplaythrough', onReady);
+						video.removeEventListener('error', onReady);
+					};
+
+					const onReady = () => {
+						cleanup();
+						resolvePromise();
+					};
+
+					video.addEventListener('loadeddata', onReady, { once: true });
+					video.addEventListener('canplaythrough', onReady, { once: true });
+					video.addEventListener('error', onReady, { once: true });
+				});
+			})
+		).then(() => undefined);
+	}
+
 	onMount(async () => {
 		// Wait one microtask to let children mount and register images
 		await Promise.resolve();
 		const urls = getImageUrls();
-		if (!urls.length) {
-			loading = false;
-			return;
-		}
-		await preloadImages(urls);
+		await Promise.all([preloadImages(urls), waitForVideos()]);
 		loading = false;
 	});
 </script>
