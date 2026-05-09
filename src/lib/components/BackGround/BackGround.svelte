@@ -8,16 +8,16 @@
 <img class="bg-fallback" src="/fallback_bg.png" alt="" aria-hidden="true" />
 
 <video
-	class="bg-parallax"
-	class:loaded={videoLoaded}
-	autoplay
-	loop
-	muted
-	playsinline
-	preload="auto"
-	oncanplaythrough={() => (videoLoaded = true)}
+    class="bg-parallax"
+    class:loaded={videoLoaded}
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="none"
+    oncanplay={() => (videoLoaded = true)}
 >
-	<source src="/bg_parallax.mp4" type="video/mp4" />
+    <source src="/bg_test.mp4" type="video/mp4" />
 </video>
 
 <div class="music-box-wrapper">
