@@ -52,7 +52,10 @@
 			</div>
 
 			<div class="title-wrapper">
-				<a href={project.link} target="_blank"><h1 class="project-title">{project.title}</h1></a>
+				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+				<a href={project.link} target="_blank">
+					<h1 class="project-title">{project.title}</h1>
+				</a>
 			</div>
 
 			<div class="stats">

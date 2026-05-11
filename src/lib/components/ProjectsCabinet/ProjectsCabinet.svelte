@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import thcTbg from '$lib/assets/images/thc/thc-thought-bg.png';
+	import closeBtnEng from '$lib/assets/images/thc/button_forget.png';
+	import closeBtnBr from '$lib/assets/images/thc/button_forget-pt-BR.png';
 	import thcBG from '$lib/assets/images/thc/thc-bg.png';
 	import { fade } from 'svelte/transition';
 	import Project from './Project/Project.svelte';
 	import ProjectDescription from './ProjectDescription/ProjectDescription.svelte';
 	import { gridW, ITEM_SIZE, projectDefs, type IProjects } from './projects';
 
-	// FIXME load all when user enters the site?
 	const fullImages = import.meta.glob<{ default: string }>('$lib/assets/images/thc/full/*.png', {
 		eager: true
 	});
@@ -42,6 +45,19 @@
 
 	let { showing }: { showing: boolean } = $props();
 	let selectedProject = $state<IProjects | null>(null);
+
+	onMount(() => {
+		// UI images
+		[thcBG, thcTbg, closeBtnEng, closeBtnBr].forEach((src) => {
+			new Image().src = src;
+		});
+
+		// Project images
+		for (const pair of shuffledPairs) {
+			new Image().src = pair.full;
+			new Image().src = pair.icon;
+		}
+	});
 </script>
 
 {#if showing}

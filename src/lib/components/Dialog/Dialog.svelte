@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import portraitFrame from '$lib/assets/images/portraitframe.png';
 	import dialogFrame from '$lib/assets/images/dialog_panel.png';
 	import portraitShivers from '$lib/assets/images/dialogs/portrait_shivers.png';
@@ -152,6 +152,13 @@
 		audio.play();
 	}
 
+	onMount(() => {
+		for (const url of Object.values(portraitMap)) {
+			const img = new Image();
+			img.src = url;
+		}
+	});
+
 	onDestroy(() => {
 		if (audio) {
 			audio.pause();
@@ -170,14 +177,20 @@
 					</p>
 				{/each}
 			</div>
-			<img loading="lazy" decoding="async" src={dialogFrame} alt="dialog-frame" class="dialog-img" />
+			<img
+				loading="lazy"
+				decoding="async"
+				src={dialogFrame}
+				alt="dialog-frame"
+				class="dialog-img"
+			/>
 		</div>
 
 		<div class="internalize-btn">
 			<audio bind:this={audioEl} src={clickSFX}></audio>
 			{#if lang === 'en'}
 				<button onclick={handleInternalize}>
-						<img loading="lazy" decoding="async" src={internalizeBtnENG} alt="internalize" />
+					<img loading="lazy" decoding="async" src={internalizeBtnENG} alt="internalize" />
 				</button>
 			{:else}
 				<button onclick={handleInternalize}>
@@ -188,8 +201,8 @@
 
 		<div class="portrait-wrapper">
 			<div class="portrait-animator">
-				<img loading="lazy" decoding="async" src={portraitFrame} alt="por-frame" class="portrait" />
-				<img loading="lazy" decoding="async" src={currentPortrait} alt="portrait" class="portrait-inner" />
+				<img decoding="async" src={portraitFrame} alt="por-frame" class="portrait" />
+				<img decoding="async" src={currentPortrait} alt="portrait" class="portrait-inner" />
 			</div>
 		</div>
 	</div>
