@@ -27,7 +27,7 @@
 </button>
 
 <audio bind:this={audio} autoplay id="ost">
-	<source src={ost} />
+	<source src={ost} type="audio/ogg"/>
 </audio>
 
 <style lang="scss">
