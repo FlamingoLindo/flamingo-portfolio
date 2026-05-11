@@ -1,5 +1,4 @@
 <script lang="ts">
-	import BackGround from '$lib/components/BackGround/BackGround.svelte';
 	import MenuOptions from '$lib/components/MenuOptions/MenuOptions.svelte';
 	import MyDialog from '$lib/components/MyDialog/MyDialog.svelte';
 	import startDialogSFX from '$lib/assets/audios/sfx/start_dialog.wav';
@@ -15,6 +14,8 @@
 	import { dialogs } from '$lib/components/Dialog/dialogs';
 	import Credits from '$lib/components/Credits/Credits.svelte';
 	import { m } from '$lib/paraglide/messages';
+	import LanguageOption from '$lib/components/LanguageOption/LanguageOption.svelte';
+	import MusicBox from '$lib/components/MusicBox/MusicBox.svelte';
 
 	let activeId = $state<number | null>(null);
 	let currentAudio = $state<string | null>(null);
@@ -99,7 +100,10 @@
 	</CustomTab>
 </div>
 
-<BackGround />
+<div class="music-box-wrapper">
+	<LanguageOption />
+	<MusicBox />
+</div>
 
 <style>
 	.menu-container {
@@ -171,5 +175,15 @@
 		display: flex;
 		align-items: center;
 		z-index: 5;
+	}
+
+	.music-box-wrapper {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 </style>

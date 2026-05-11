@@ -27,7 +27,8 @@
 </button>
 
 <audio bind:this={audio} autoplay id="ost">
-	<source src={ost} type="audio/ogg" />
+	<source src={ost} />
+	{$inspect(ost)}
 </audio>
 
 <style lang="scss">

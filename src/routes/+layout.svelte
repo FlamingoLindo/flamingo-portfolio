@@ -7,7 +7,6 @@
 	import { onMount } from 'svelte';
 
 	let { children } = $props();
-
 	let loading = $state(true);
 	let progress = $state(0);
 	let total = $state(0);
@@ -15,7 +14,6 @@
 	function getImageUrls(): string[] {
 		const urls: string[] = [];
 		const seen: Record<string, 1> = Object.create(null);
-
 		function add(u: string | undefined) {
 			if (!u) return;
 			if (u.startsWith('data:')) return;
@@ -23,8 +21,6 @@
 			seen[u] = 1;
 			urls.push(u);
 		}
-
-		// <img src>
 		for (const img of Array.from(document.images || [])) {
 			add(img.src);
 			try {
@@ -33,8 +29,6 @@
 				void e;
 			}
 		}
-
-		// <source srcset>
 		for (const src of Array.from(
 			document.querySelectorAll('source[srcset]')
 		) as HTMLSourceElement[]) {
@@ -44,8 +38,6 @@
 				.filter(Boolean)
 				.forEach((u) => add(u));
 		}
-
-		// background-image from computed styles
 		const all = Array.from(document.querySelectorAll<HTMLElement>('*'));
 		const urlRegex = /url\(["']?([^"')]+)["']?\)/g;
 		for (const el of all) {
@@ -59,7 +51,6 @@
 				void e;
 			}
 		}
-
 		return urls;
 	}
 
@@ -68,11 +59,9 @@
 			if (!urls.length) return resolvePromise();
 			let loaded = 0;
 			total = urls.length;
-
 			const update = () => {
 				progress = Math.round((loaded / total) * 100);
 			};
-
 			for (const url of urls) {
 				const img = new Image();
 				img.onload = () => {
@@ -85,25 +74,43 @@
 					update();
 					if (loaded === total) resolvePromise();
 				};
-				// add cache-busting protection? not needed
 				img.src = url;
 			}
 		});
 	}
 
 	onMount(async () => {
-		// Wait one microtask to let children mount and register images
 		await Promise.resolve();
 		const urls = getImageUrls();
 		await Promise.all([preloadImages(urls)]);
 		loading = false;
 	});
+
+	let videoEl = $state<HTMLVideoElement | null>(null);
+	let videoLoaded = $state(false);
+
+	onMount(() => {
+		if (!videoEl) return;
+
+		const onReady = () => {
+			videoLoaded = true;
+		};
+
+		videoEl.addEventListener('canplay', onReady, { once: true });
+		videoEl.addEventListener('playing', onReady, { once: true });
+
+		if (videoEl.readyState >= 3) onReady();
+
+		return () => {
+			videoEl?.removeEventListener('canplay', onReady);
+			videoEl?.removeEventListener('playing', onReady);
+		};
+	});
 </script>
 
-<!-- <link rel="icon" href={favicon} /> -->
 <svelte:head><title>Flamingo Portfolio</title></svelte:head>
-{@render children()}
 
+{@render children()}
 <LoadingModal show={loading} {progress} {total} />
 
 <div style="display:none">
@@ -112,8 +119,42 @@
 	{/each}
 </div>
 
+<img class="bg-fallback" src="/fallback_bg.png" alt="" aria-hidden="true" />
+<video
+	bind:this={videoEl}
+	class="bg-parallax"
+	class:loaded={videoLoaded}
+	autoplay
+	loop
+	muted
+	playsinline
+	preload="auto"
+>
+	<source src="/bg_video.mp4" type="video/mp4" />
+</video>
+
 <style>
 	:global(html) {
 		cursor: url('/cursor.png'), auto;
+	}
+	.bg-fallback,
+	.bg-parallax {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		pointer-events: none;
+	}
+	.bg-fallback {
+		z-index: -2;
+	}
+	.bg-parallax {
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		&.loaded {
+			opacity: 1;
+		}
 	}
 </style>
